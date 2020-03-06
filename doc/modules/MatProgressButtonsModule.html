@@ -221,7 +221,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/module/mat-progress-buttons.module.ts:39</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/module/mat-progress-buttons.module.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -230,7 +230,7 @@
                     <td class="col-md-4">
 
                             <div class="io-description">
-                                <b>Returns : </b>    <code><a href="https://angular.io/api/core/ModuleWithProviders" target="_blank" >ModuleWithProviders</a></code>
+                                <b>Returns : </b>    <code>ModuleWithProviders&lt;MatProgressButtonsModule&gt;</code>
 
                             </div>
                     </td>
@@ -248,14 +248,11 @@ import { NgModule, ModuleWithProviders } from &#x27;@angular/core&#x27;;
 
 import { MatSpinnerButtonComponent } from &#x27;./component/spinner-button/spinner-button.component&#x27;;
 import { MatBarButtonComponent } from &#x27;./component/bar-button/bar-button.component&#x27;;
-
-import {
-  MatButtonModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRippleModule,
-  MatIconModule,
-} from &#x27;@angular/material&#x27;;
+import { MatButtonModule } from &#x27;@angular/material/button&#x27;;
+import { MatProgressBarModule } from &#x27;@angular/material/progress-bar&#x27;;
+import { MatProgressSpinnerModule } from &#x27;@angular/material/progress-spinner&#x27;;
+import { MatRippleModule } from &#x27;@angular/material/core&#x27;;
+import { MatIconModule } from &#x27;@angular/material/icon&#x27;;
 
 // Export module&#x27;s public API
 export { MatSpinnerButtonComponent } from &#x27;./component/spinner-button/spinner-button.component&#x27;;
@@ -281,7 +278,7 @@ export { MatProgressButtonOptions } from &#x27;./mat-progress-buttons.interface&
   ]
 })
 export class MatProgressButtonsModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders&lt;MatProgressButtonsModule&gt; {
     return {
       ngModule: MatProgressButtonsModule
     };
